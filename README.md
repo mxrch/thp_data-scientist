@@ -4,4 +4,4 @@
 
 https://www.thehackingproject.org
 
-Fait en pair-programming avec @OwwllMan.
+Made in pair-programming with @OwwllMan.
