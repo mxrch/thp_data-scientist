@@ -29,7 +29,7 @@ end
 def firstCharUpcase(handle)
   nbFirstUpcase = 0
   handle.each do |user|
-    if user[1] == user[1].upcase
+    if user[1] == user[1].upcase && ((user[1] >= "A" && user[1] <= "Z") || (user[1] >= "a" && user[1] <= "z"))
       nbFirstUpcase += 1
     end
   end
@@ -43,7 +43,7 @@ def handleWithUpcase(handle)
     count = 0
     user.split("").each do |char|
       if count != 0
-        if char == char.upcase
+        if char == char.upcase && ((char >= "A" && char <= "Z") || (char >= "a" && char <= "z"))
           number = 1
         end
       end
@@ -59,8 +59,10 @@ end
 def underscoreInHandle(handle)
   nbUnderscore = 0
   handle.each do |user|
-    if user.include? "_"
-      nbUnderscore += 1
+    user.split("").each do |char|
+      if char == "_"
+        nbUnderscore += 1
+      end
     end
   end
   return nbUnderscore
